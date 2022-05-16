@@ -56,7 +56,7 @@ const Board: FC<IBoard> = ({ userIdQuery }) => {
     }
   }, [userIdQuery, getPasswordInfo])
 
-  const accountSelected = (e) => {
+  const accountSelected = (e: any) => {
     if (e.target.id) {
       const selectedAccount = passwordInfo.filter((el: IPasswordInfo) => el.id === e.target.id)
       setSelectedAccountInfo(selectedAccount[0])
