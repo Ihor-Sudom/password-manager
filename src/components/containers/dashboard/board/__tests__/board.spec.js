@@ -38,6 +38,6 @@ describe('render Board component', () => {
   it('Should check if modal window opens when Add Account button is clicked', () => {
     component.find(Button).prop('onClick')()
 
-    expect(component.find(Modal).exists()).toEqual(true)
+    expect(component.find(Modal).length).toBe(1)
   })
 })
