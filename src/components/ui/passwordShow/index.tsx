@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import NextImage from 'next/image'
 import styled from 'styled-components'
 
-const IconContainerStyled = styled.div`
+export const IconContainerStyled = styled.div`
   position: relative;
   width: 20px;
   height: 20px;
