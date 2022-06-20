@@ -1,27 +1,21 @@
 import React from 'react'
 import Board from '../Board.tsx'
+import Button from '../../../../ui/button'
+import Modal from '../../../../ui/modal/addAccount/ModalAddAccount.tsx'
 import {
   RegisteredContainerStyled,
   UnregisteredStyled,
   AccountsContentStyled,
   AccountNameStyled,
 } from '../Board.styles.ts'
-import Button from '../../../../ui/button'
-import Modal from '../../../../ui/modal/addAccount/ModalAddAccount.tsx'
 
 const wrapperBoard = (props) => shallow(<Board {...props} />)
 const props = { userIdQuery: 1 }
 
 const component = wrapperBoard(props)
 
-const initialState = {
-  id: 10,
-  accountName: 'GitHub',
-  email: 'jhon@gmail.com',
-  password: '12345!',
-}
-
 describe('render Board component', () => {
+
   it('Should render Board component with props', () => {
     const wrapper = component.find(RegisteredContainerStyled)
 
@@ -39,5 +33,11 @@ describe('render Board component', () => {
     component.find(Button).prop('onClick')()
 
     expect(component.find(Modal).length).toBe(1)
+  })
+
+  it('Should check if modal window close', () => {
+    component.find(Modal).prop('closeModal')()
+
+    expect(component.find(Modal).length).toBe(0)
   })
 })
