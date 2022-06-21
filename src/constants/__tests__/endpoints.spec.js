@@ -1,7 +1,7 @@
 import React from 'react'
 import ENDPOINTS from '../endpoints.ts'
 
-describe('Check endpoints', () => {
+describe('Endpoints', () => {
 
   it('Endpoint has properties', () => {
     expect(ENDPOINTS).toHaveProperty('GET')

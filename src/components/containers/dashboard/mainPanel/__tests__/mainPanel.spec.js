@@ -4,7 +4,8 @@ import Link from '../../../../ui/link'
 
 const wrapperMainPanel = (props) => shallow(<MainPanel {...props} />)
 
-describe('Should render the MainPanel component based on props', () => {
+describe('MainPanel', () => {
+
   it('Should render the MainPanel component with 1 link', () => {
     const component = wrapperMainPanel({
       userInfo: { firstName: 'John', lastName: 'Dou' },

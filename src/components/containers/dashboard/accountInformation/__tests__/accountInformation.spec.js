@@ -18,7 +18,8 @@ const props = {
 
 const component = wrapperAccountInformation(props)
 
-describe('Should render AccountInformation component', () => {
+describe('AccountInformation', () => {
+
   it('Should render AccountInformation component without modals', () => {
     expect(component.find(ModalDeleteConfirm).exists()).toEqual(false)
     expect(component.find(ModalEditAccount).exists()).toEqual(false)

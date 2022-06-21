@@ -11,7 +11,7 @@ const props = { children: componentLogin }
 
 const component = wrapperLayout(props)
 
-describe('Layout component', () => {
+describe('Layout', () => {
   it('Should render Layout with children property', () => {
     expect(component.find(LoginContainerStyled).length).toBe(1)
   })

@@ -2,19 +2,14 @@ import React from 'react'
 import Board from '../Board.tsx'
 import Button from '../../../../ui/button'
 import Modal from '../../../../ui/modal/addAccount/ModalAddAccount.tsx'
-import {
-  RegisteredContainerStyled,
-  UnregisteredStyled,
-  AccountsContentStyled,
-  AccountNameStyled,
-} from '../Board.styles.ts'
+import { RegisteredContainerStyled, UnregisteredStyled } from '../Board.styles.ts'
 
 const wrapperBoard = (props) => shallow(<Board {...props} />)
 const props = { userIdQuery: 1 }
 
 const component = wrapperBoard(props)
 
-describe('render Board component', () => {
+describe('Board', () => {
 
   it('Should render Board component with props', () => {
     const wrapper = component.find(RegisteredContainerStyled)

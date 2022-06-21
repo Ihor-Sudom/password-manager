@@ -11,7 +11,7 @@ const props = {
 
 const component = wrapperPasswordShow(props)
 
-describe('PasswordShow component', () => {
+describe('PasswordShow', () => {
   it('Should render PasswordShow component', () => {
     expect(component.length).toBe(1)
   })
